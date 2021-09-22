@@ -3,7 +3,7 @@ import Footer from "../footer/Footer";
 
 export default function Layout(props) {
   return (
-    <div>
+    <div className='layout'>
       <Header />
       <div>{props.children}</div>
       <Footer />

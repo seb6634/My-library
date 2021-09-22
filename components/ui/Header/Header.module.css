@@ -1,4 +1,7 @@
 .Header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   background-color: #293241;
   padding: 25px;
   text-transform: uppercase;
