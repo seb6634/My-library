@@ -1,30 +1,17 @@
-// Librairies
 import classes from "./BookCard.module.css";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-export default function BookCard() {
-  // Variable
+export default function BookCard(props) {
   const router = useRouter();
-
-  // Méthode
-  const cardClickedHandler = () => {
-    router.push({
-      pathname: "/books/[slug]",
-      query: {
-        slug: "book1",
-      },
-    });
-  };
+  const { title, description, slug } = props.book;
 
   return (
-    <div className={classes.BookCard} onClick={cardClickedHandler}>
-      <h3>Livre 1</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non
-        quis exercitationem culpa nesciunt nihil aut nostrum explicabo
-        reprehenderit optio amet ab temporibus asperiores quasi cupiditate.
-        Voluptatum ducimus voluptates voluptas?
-      </p>
-    </div>
+    <Link href={`/books/${slug}`}>
+      <a className={classes.BookCard}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </a>
+    </Link>
   );
 }
