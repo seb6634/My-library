@@ -2,9 +2,13 @@
   border: 2px solid #3d5a80;
   border-radius: 5px;
   padding: 15px;
-  margin: 10px;
+  margin: 30px;
   transition: all 0.3s;
-  width: 10rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .BookCard:hover {
   background: #3d5a80;
@@ -12,7 +16,13 @@
 }
 
 .BookCard h3 {
-  font-weight: light;
+  font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 8px;
+  text-align: center;
+}
+
+.BookCard img {
+  width: 17rem;
+  height: 15rem;
 }

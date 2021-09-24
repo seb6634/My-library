@@ -1,6 +1,7 @@
-import classes from "./BookCard.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
+
+import classes from "./BookCard.module.css";
 
 export default function BookCard(props) {
   const router = useRouter();
@@ -10,7 +11,8 @@ export default function BookCard(props) {
     <Link href={`/books/${slug}`}>
       <a className={classes.BookCard}>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <img src={"/Sapiens.jpg"} />
+        <p>{description.substring(0, 100) + " ..."}</p>
       </a>
     </Link>
   );

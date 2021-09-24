@@ -5,13 +5,28 @@ body {
   color: white;
 }
 
-.container {
-  margin: 15px;
-  position: relative;
-  top: 70px;
-  color: black;
-  height: 100%;
-  width: 100%;
+.layout {
   display: flex;
+  flex-direction: column;
+}
+
+.container {
+  color: black;
+  min-height: 1000px;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.title {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  color: black;
+  margin: 2rem;
 }

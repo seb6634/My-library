@@ -4,11 +4,12 @@ import BookCard from "../../components/ui/BookCard/BookCard";
 
 export default function Books(props) {
   return (
-    <div className='container'>
+    <>
+      <h1 className='title'>Ma collection de livres</h1>
       {props.books.map((book) => (
         <BookCard key={book._id} book={book} />
       ))}
-    </div>
+    </>
   );
 }
 

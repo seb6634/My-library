@@ -1,7 +1,7 @@
 export default function Index() {
   return (
-    <div className='container'>
-      <main>Page d'acceuil</main>
-    </div>
+    <main>
+      <h1 className='title'>Bienvenue dans ma biblioteque</h1>
+    </main>
   );
 }
