@@ -5,7 +5,7 @@ export default function Book() {
 
   return (
     <div className='container'>
-      <h1>{router.query.slug}</h1>
+      <h1 className='title'>{router.query.slug}</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta
         minus molestiae vel beatae natus eveniet ratione temporibus aperiam

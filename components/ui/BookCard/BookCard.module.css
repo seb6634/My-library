@@ -1,5 +1,5 @@
 .BookCard {
-  border: 2px solid #3d5a80;
+  border: 0px solid #3d5a80;
   border-radius: 5px;
   padding: 15px;
   margin: 30px;
@@ -17,12 +17,11 @@
 
 .BookCard h3 {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin-bottom: 8px;
   text-align: center;
 }
 
-.BookCard img {
-  width: 17rem;
-  height: 15rem;
+.BookCard p {
+  text-align: center;
 }

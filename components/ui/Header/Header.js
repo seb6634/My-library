@@ -6,7 +6,7 @@ export default function Header({ firstName = "Sébastien" }) {
     <header className={classes.Header}>
       <nav>
         <ul>
-          <li className='name'>{firstName}</li>
+          <li className='firt_name'>{firstName}</li>
           <li>
             <Link href='/'>Acceuil</Link>
           </li>
@@ -14,7 +14,10 @@ export default function Header({ firstName = "Sébastien" }) {
             <Link href='/books'>Livres</Link>
           </li>
           <li>
-            <Link href='about'>A Propos</Link>
+            <Link href='/addBook'>Ajouter</Link>
+          </li>
+          <li>
+            <Link href='/about'>Apropos</Link>
           </li>
         </ul>
       </nav>
