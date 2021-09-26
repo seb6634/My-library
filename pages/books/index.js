@@ -1,9 +1,10 @@
 import { connectToDatabase } from "../../helpers/mongodb";
+
 import BookCard from "../../components/ui/BookCard/BookCard";
 import Head from "next/head";
 
 export default function Books(props) {
-  let h1 = "Ma collection de livres";
+  let h1 = "Mes livres";
   return (
     <>
       <Head>

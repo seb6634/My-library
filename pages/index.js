@@ -7,9 +7,20 @@ export default function Index() {
       <Head>
         <title>{h1}</title>
       </Head>
-      <main>
-        <h1 className='title'>{h1}</h1>
-      </main>
+      <div
+        className='container'
+        style={{
+          backgroundImage: "url(/library3.png",
+          backgroundPosition: "center",
+          backgroundSize: "60%",
+          backgroundRepeat: "no-repeat",
+          height: "1000px",
+          width: "100%",
+        }}>
+        <main>
+          <h1 className='title'>{h1}</h1>
+        </main>
+      </div>
     </>
   );
 }

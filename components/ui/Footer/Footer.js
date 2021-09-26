@@ -2,8 +2,8 @@ import classes from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className={classes.Footer}>© Sébastien Gonzalez</div>
+    <footer className={classes.Footer}>
+      <div className='name_footer'>© Sébastien Gonzalez</div>
     </footer>
   );
 }

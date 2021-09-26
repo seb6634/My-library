@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 
 export default function AddBook() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -23,6 +25,7 @@ export default function AddBook() {
       console.log(fetchedData.message || "Une erreur est survenue dans l'API.");
     } else {
       console.log(fetchedData);
+      router.push("/books");
     }
   };
 
@@ -38,12 +41,11 @@ export default function AddBook() {
             backgroundColor: "#f3f3f3",
             padding: "30px",
           }}>
-          {(errors.titre ||
-            errors.slug ||
-            errors.client ||
-            errors.annee ||
+          {(errors.title ||
+            errors.tag ||
+            errors.year ||
             errors.description ||
-            errors.contenu) && (
+            errors.author) && (
             <div
               style={{
                 margin: "15px 0 15px 0",
@@ -57,9 +59,9 @@ export default function AddBook() {
           )}
           <form onSubmit={handleSubmit(onSubmittedHandler)}>
             <p>
-              <label htmlFor='titre'>Titre</label>
+              <label htmlFor='title'>Titre</label>
               <input
-                id='titre'
+                id='title'
                 placeholder='Titre du livre'
                 style={{
                   display: "block",
@@ -69,16 +71,16 @@ export default function AddBook() {
                   borderRadius: "5px",
                   marginTop: "5px",
                 }}
-                {...register("titre", {
+                {...register("title", {
                   required: true,
                 })}
               />
             </p>
             <p>
-              <label htmlFor='slug'>Slug</label>
+              <label htmlFor='tag'>Theme</label>
               <input
-                id='slug'
-                placeholder='Slug du livre'
+                id='tag'
+                placeholder='Theme du livre'
                 style={{
                   display: "block",
                   width: "400px",
@@ -87,33 +89,15 @@ export default function AddBook() {
                   borderRadius: "5px",
                   marginTop: "5px",
                 }}
-                {...register("slug", {
+                {...register("tag", {
                   required: true,
                 })}
               />
             </p>
             <p>
-              <label htmlFor='client'>Client</label>
+              <label htmlFor='year'>Année</label>
               <input
-                id='client'
-                placeholder='Client associé au livre'
-                style={{
-                  display: "block",
-                  width: "400px",
-                  border: "1px solid gray",
-                  padding: "10px 15px 10px 15px",
-                  borderRadius: "5px",
-                  marginTop: "5px",
-                }}
-                {...register("client", {
-                  required: true,
-                })}
-              />
-            </p>
-            <p>
-              <label htmlFor='annee'>Année</label>
-              <input
-                id='annee'
+                id='year'
                 placeholder='Année de sortie du livre'
                 style={{
                   display: "block",
@@ -123,10 +107,28 @@ export default function AddBook() {
                   borderRadius: "5px",
                   marginTop: "5px",
                 }}
-                {...register("annee", {
+                {...register("year", {
                   required: true,
                 })}
               />
+            </p>
+            <p>
+              <label htmlFor='author'>Auteur</label>
+              <textarea
+                id='author'
+                placeholder='Auteur du livre'
+                style={{
+                  display: "block",
+                  width: "400px",
+                  border: "1px solid gray",
+                  padding: "10px 15px 10px 15px",
+                  borderRadius: "5px",
+                  marginTop: "5px",
+                  fontFamily: "arial",
+                }}
+                {...register("author", {
+                  required: true,
+                })}></textarea>
             </p>
             <p>
               <label htmlFor='description'>Description</label>
@@ -147,25 +149,7 @@ export default function AddBook() {
                   required: true,
                 })}></textarea>
             </p>
-            <p>
-              <label htmlFor='contenu'>Contenu</label>
-              <textarea
-                id='contenu'
-                placeholder='Contenu du livre'
-                rows='5'
-                style={{
-                  display: "block",
-                  width: "400px",
-                  border: "1px solid gray",
-                  padding: "10px 15px 10px 15px",
-                  borderRadius: "5px",
-                  marginTop: "5px",
-                  fontFamily: "arial",
-                }}
-                {...register("contenu", {
-                  required: true,
-                })}></textarea>
-            </p>
+
             <div
               style={{
                 display: "flex",

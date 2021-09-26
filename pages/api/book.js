@@ -1,9 +1,9 @@
 import { connectToDatabase } from "../../helpers/mongodb";
 
 export default async function handler(req, res) {
-  const { titre, slug, client, annee, description, contenu } = req.body;
+  const { title, tag, year, description, author } = req.body;
 
-  if (!titre || !slug || !client || !annee || !description || !contenu) {
+  if (!title || !tag || !year || !description || !author) {
     res.status(422).json({
       message: "Champ du formulaire manquant.",
     });
@@ -11,13 +11,11 @@ export default async function handler(req, res) {
   }
 
   const newBook = {
-    titre,
-    slug,
-    client,
-    annee,
+    title,
+    tag,
+    year,
     description,
-    contenu,
-    dateDePublication: new Date(),
+    author,
   };
 
   let clientMongoDB;

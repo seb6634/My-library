@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 .Header {
   width: 100%;
   height: 70px;
@@ -8,8 +9,11 @@
 
 .Header nav ul {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
-  align-items: center;
+  padding: 25px;
+  font-family: "Playfair Display", serif;
 }
 
 .Header nav a {
