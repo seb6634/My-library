@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Stick+No+Bills:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+html,
+body {
+  font-family: arial;
+  color: white;
+  height: 100%;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  color: black;
+  height: 1500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.title {
+  font-family: "Bonheur Royale", cursive;
+  font-size: 3rem;
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  color: black;
+  margin: 2rem;
+}
+.firt_name {
+  color: beige;
+  margin-right: 13%;
+}
+
+form p {
+  font-family: "Playfair Display", serif;
+  margin: 7px;
+}
