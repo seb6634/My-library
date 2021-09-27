@@ -1,7 +1,7 @@
 import { connectToDatabase } from "../../helpers/mongodb";
 
 export default async function handler(req, res) {
-  const { title, tag, year, description, author } = req.body;
+  const { title, tag, year, description, author, img } = req.body;
 
   if (!title || !tag || !year || !description || !author) {
     res.status(422).json({
@@ -16,6 +16,7 @@ export default async function handler(req, res) {
     year,
     description,
     author,
+    img,
   };
 
   let clientMongoDB;

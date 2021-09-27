@@ -24,7 +24,7 @@ export default function AddBook() {
     if (!response.ok) {
       console.log(fetchedData.message || "Une erreur est survenue dans l'API.");
     } else {
-      console.log(fetchedData);
+      console.log(fetchedData.message);
       router.push("/books");
     }
   };
@@ -45,7 +45,8 @@ export default function AddBook() {
             errors.tag ||
             errors.year ||
             errors.description ||
-            errors.author) && (
+            errors.author ||
+            errors.img) && (
             <div
               style={{
                 margin: "15px 0 15px 0",
@@ -108,6 +109,24 @@ export default function AddBook() {
                   marginTop: "5px",
                 }}
                 {...register("year", {
+                  required: true,
+                })}
+              />
+            </p>
+            <p>
+              <label htmlFor='img'>Image</label>
+              <input
+                id='year'
+                placeholder="Lien de l'image"
+                style={{
+                  display: "block",
+                  width: "400px",
+                  border: "1px solid gray",
+                  padding: "10px 15px 10px 15px",
+                  borderRadius: "5px",
+                  marginTop: "5px",
+                }}
+                {...register("img", {
                   required: true,
                 })}
               />

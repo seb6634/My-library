@@ -9,7 +9,7 @@ export default function About({ about = "A propos" }) {
         className='container'
         style={{
           backgroundImage: "url(/about.png",
-          backgroundPosition: "center",
+          backgroundPosition: "center top",
           backgroundSize: "70%",
           backgroundRepeat: "no-repeat",
           height: "100%",

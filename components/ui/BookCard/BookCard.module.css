@@ -12,8 +12,8 @@
   gap: 20px;
 }
 .BookCard:hover {
-  background: #3d5a80;
-  color: white;
+  transform: scale(1.1);
+  transition: all 0.7s;
 }
 
 .BookCard h3 {
